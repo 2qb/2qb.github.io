@@ -1,0 +1,37 @@
+  body {
+    --bg-color: hsl(0, 0%, 16%, 1);
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    color: white;
+    font-family: san-serif;
+    font-size: clamp(3rem, 25vmin, 8rem);
+  }
+
+  h1 > .name {
+    --first-color: rgb(169, 84, 206);
+    --second-color: rgb(130, 52, 255);
+    font-family: san-serif;
+    font-size: clamp(3rem, 25vmin, 8rem);
+
+    background: linear-gradient(90deg,  
+     var(--first-color),
+     var(--second-color),
+     var(--first-color))
+      0 0 / 400% 100%;
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 5s infinite linear;
+  }
+  
+  @keyframes gradient {
+    to {
+      background-position: 400% 0;
+    }
+  }
