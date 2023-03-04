@@ -1,4 +1,4 @@
-  body {
+ body {
     --bg-color: hsl(0, 0%, 16%, 1);
     background-color: var(--bg-color);
     display: flex;
@@ -6,32 +6,71 @@
     justify-content: center;
   }
 
-  h1 {
+ h1 > .greet {
     color: white;
     font-family: san-serif;
     font-size: clamp(3rem, 25vmin, 8rem);
+    animation: fadeout 2s forwards;
+
+    position: relative;
+    left: 250px;
+  }
+
+ h1 > .text {
+    color: white;
+    font-family: san-serif;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    animation: fadein 4s linear;
+
+    position: relative;
+    left: -70px;
   }
 
   h1 > .name {
-    --first-color: rgb(169, 84, 206);
-    --second-color: rgb(130, 52, 255);
     font-family: san-serif;
     font-size: clamp(3rem, 25vmin, 8rem);
 
     background: linear-gradient(90deg,  
-     var(--first-color),
-     var(--second-color),
-     var(--first-color))
+    #e0c3fc,
+    #8ec5fc,
+    #e0c3fc)
       0 0 / 400% 100%;
 
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: gradient 5s infinite linear;
+    animation: gradient 4s infinite linear, fadein 4s linear;
+
+    position: relative;
+    left: -60px;
   }
   
   @keyframes gradient {
     to {
       background-position: 400% 0;
+    }
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity : 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 100;
+    }
+    50% {
+      opacity : 100;
+    }
+    100% {
+      opacity: 0;
     }
   }
