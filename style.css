@@ -12,8 +12,9 @@
     font-size: clamp(3rem, 25vmin, 8rem);
     animation: fadeout 2s forwards;
 
+    text-align: center;
     position: relative;
-    left: 250px;
+    left: 200px;
   }
 
  h1 > .text {
@@ -23,7 +24,7 @@
     animation: fadein 4s linear;
 
     position: relative;
-    left: -70px;
+    left: -110px;
   }
 
   h1 > .name {
@@ -42,7 +43,7 @@
     animation: gradient 4s infinite linear, fadein 4s linear;
 
     position: relative;
-    left: -60px;
+    left: -100px;
   }
   
   @keyframes gradient {
